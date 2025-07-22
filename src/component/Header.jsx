@@ -95,7 +95,7 @@ function Header() {
                   >
                     Products
                   </Link>
-                  <ul className="dropdown-menu dropdown-menu-">
+                  <ul className="dropdown-menu">
                     <li>
                       <Link className="dropdown-item" to="/">
                         Product A

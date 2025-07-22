@@ -140,7 +140,6 @@ function Home() {
 
   return (
     <>
-      <Header/>
       <div className="container py-5 mt-5">
         <h2 className="mb-4 text-center">CRUD with ReactJS & Google Sheets</h2>
         <div
