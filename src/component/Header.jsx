@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom"; // Import Link และ NavLink สำหรับลิงค์หน้าอื่นๆ
 
 function Header() {
   return (
@@ -13,10 +14,11 @@ function Header() {
       <nav className="navbar navbar-dark bg-primary navbar-expand-lg fixed-top">
         <div className="container-fluid">
           {/* Logo/Brand */}
-          <a className="navbar-brand" href="#">
-            <i className="bi bi-apple me-2"></i> {/* เพิ่ม me-2 เพื่อเว้นระยะจากข้อความ */}
-            Your Brand
-          </a>
+          <Link className="navbar-brand" to="/">
+            <i className="bi bi-apple me-2"></i>{" "}
+            {/* เพิ่ม me-2 เพื่อเว้นระยะจากข้อความ */}
+            Brand
+          </Link>
 
           {/*
             Navbar Toggler (ปุ่ม Hamburger)
@@ -49,7 +51,11 @@ function Header() {
           >
             <div className="offcanvas-header">
               <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
-                Navigation
+                <Link className="navbar-brand" to="/">
+                  <i className="bi bi-apple me-2"></i>{" "}
+                  {/* เพิ่ม me-2 เพื่อเว้นระยะจากข้อความ */}
+                  Brand
+                </Link>
               </h5>
               <button
                 type="button"
@@ -70,50 +76,50 @@ function Header() {
               */}
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
+                  <Link className="nav-link active" aria-current="page" to="/">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <Link className="nav-link" to="/about">
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item dropdown">
-                  <a
+                  <Link
                     className="nav-link dropdown-toggle"
-                    href="#"
+                    to="/"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
                     Products
-                  </a>
-                  <ul className="dropdown-menu dropdown-menu-dark">
+                  </Link>
+                  <ul className="dropdown-menu dropdown-menu-">
                     <li>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" to="/">
                         Product A
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" to="/">
                         Product B
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <hr className="dropdown-divider" />
                     </li>
                     <li>
-                      <a className="dropdown-item" href="#">
+                      <Link className="dropdown-item" to="/">
                         View All
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <Link className="nav-link" to="/">
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
